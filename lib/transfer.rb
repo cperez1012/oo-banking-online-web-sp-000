@@ -1,6 +1,6 @@
 class Transfer
 
-def initialize(sender, receiver, amount)
+  def initialize(sender, receiver, amount)
     @sender = sender
     @receiver = receiver
     @amount = amount
@@ -34,3 +34,4 @@ def initialize(sender, receiver, amount)
       self.status = "reversed"
     end
   end
+end
