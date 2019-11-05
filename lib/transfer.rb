@@ -9,7 +9,7 @@ def initialize(sender, receiver, amount)
     sender.valid? && receiver.valid? ? true : false
   end
 
-  def execute_transaction 
+  def execute_transaction
     if both_valid? && status == "pending"
       if amount < self.sender.balance
         self.sender.balance -= amount
