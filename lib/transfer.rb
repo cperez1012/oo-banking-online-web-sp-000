@@ -9,12 +9,12 @@ attr_accessor :sender, :receiver, :amount, :status
     @status = "pending"
   end
 
-  def both_valid?
+  def valid?
     sender.valid? && receiver.valid? ? true : false
   end
 
   def execute_transaction
-    if both_valid? && status == "pending"
+    if valid? && status == "pending"
       if amount < self.sender.balance
         self.sender.balance -= amount
         self.receiver.balance += amount
