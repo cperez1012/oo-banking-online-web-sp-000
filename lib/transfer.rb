@@ -32,4 +32,3 @@ def initialize(sender, receiver, amount)
       self.status = "reversed"
     end
   end
-end
